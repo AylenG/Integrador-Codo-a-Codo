@@ -1,168 +1,239 @@
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    background-color: white;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
 
-nav a{
-    text-decoration: none;
-    margin: 0px 10px 0px 10px;
-}
-/*Header*/
-
-header{
+.header{
     width: 100%;
-    height: 650px;
-    background: url(../imagenes/header.jpg) no-repeat center center/cover;
+    height: 100vh;
+    background-image: url(../imagenes/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-header h1,h2,a {
+.header__superior {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header__titulo {
+    font-size: 50px;
     color: white;
 }
 
-header h1,h2,nav {
-    margin: 20px 40px 0px 50px;
-}
-
-header h2{
-    position: relative;
-    top: 400px;
-}
-
-.espacio{
+.header__nav-links {
+    width: 350px;
     display: flex;
     justify-content: space-between;
 }
-/*Body*/
 
-main{
-    text-align: center;
-    width: 70%;
-    margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
 
-.bloque{
-    margin: 0px 0px 0px 5px;
-    background-color:rgb(245,245,245);
-    border: solid 1px gray;
-    text-align: left;
+.link:hover {
+    text-decoration: underline;
 }
-.nosotros{
+
+.header__inferior {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0px 50px;
+}
+
+.header__subtitulo {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.main-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-section {
+    font-weight: lighter;
+    font-size: 30px;
+    margin: 45px 0px;
+}
+
+.card-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.titulo{
-    margin: 50px 0px 30px 0px;
-    font-size: 28px;
+.card-container__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 370px;
 }
 
-main .boton_ver{
-    padding: 9px 20px;
-    background-color: rgb(113,177,31);
-    color: white;
-    margin: 30px 0px 20px 0px;
-    float: right;
-    border: none;
+.card__img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
-.boton_articulo{
-    margin: 10px 10px;
-    padding: 5px;
-    width:  90%;
-    border: none;
-    background-color: rgb(223,136,23);
-    color: white;
+.card__subtitulo {
+    font-weight: bold;
+    font-size: 25px;
 }
 
-.descripcion{
-    font-size: 18px;
-    padding-left: 15px;
+.card__descripcion {
+    text-align: center;
+    line-height : 30px;
 }
 
-.subtitulo_negrita{
-    font-size: 28px;
-    padding: 15px 5px;
+.main-venta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.subtitulo{
-    font-size: 28px;
-    padding: 10px 15px;
-    text-align: left;
+.card-casa__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 370px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(214, 214, 214);
 }
 
-.precio{
-    color: green;
-    padding: 5px 15px;
-}
-/*FOOTER*/
-
-footer{
-    margin-top: 90px;
-}
-
-footer div:first-child{
-    background: url(../imagenes/encuentra.jpg) no-repeat center center/cover;
-    height: 500px;
-}
-
-footer div:last-child{
-    background-color: rgb(51,51,51);
-    text-decoration: none;
-    padding-bottom: 8px;
-}
-
-footer button{
-    background-color: rgb(223,136,23);
-    color: white;
-    border: none;
-}
-
-footer .espacio p{
-    margin-top: 20px;
-    margin: 20px 60px 0 0 ;
-}
-
-section article img{
+.card-casa__img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
-.espacios{
+.card-casa__textos {
+    margin: 0px 15px;
+    margin-top: 10px;
+}
+
+.card-casa__subtitulo {
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.card-casa__descripcion {
+    line-height: 30px;
+}
+
+.card-casa__precio {
+    color: rgb(113, 177, 31);
+    font-weight: bold;
+}
+
+.card-casa__servicios {
     display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    margin-left: -45px;
+}
+
+.servicios {
+    display: flex;
+    width: 10%;
+}
+
+.servicios__img {
+    margin-right: 15px;
+}
+
+.boton {
+    background-color: rgb(223, 136, 23);
+    width: 90%;
+    padding: 15px 0px;
+    margin-bottom: 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.boton-verde {
+    background-color: rgb(113, 177, 31);
+    width: 150px;
+    align-self: flex-end;
+    margin-top: 45px;
+}
+
+.boton-contacto {
+    width: 200px;
+    font-size: 15px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__contacto {
+    width: 100%;
+    height: 50vh;
+    background-image: url(../imagenes/encuentra.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    padding: auto;
+    padding-left: 15%;
 }
 
-.enlinea{
+.footer__subtitulo {
+    color: white;
+    font-size: 40px;
+}
+
+.footer__info {
+    color: white;
+    font-size: 20px;
+    margin-top: -15px;
+}
+
+.footer__navegacion-autor {
+    background-color: rgb(51, 51, 51);
     display: flex;
-    justify-content: space-evenly; 
-    padding: 0px 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 0px 70px;
 }
 
-.enlinea p{
-    margin-top: 8px;
-    padding: 0px 10px;
+.footer__navegacion {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.mover{
-    text-align: left;
-    padding: 100px;
-}
-
-.mover h3{
+.footer__autor {
     color: white;
-    padding-bottom: 60px;
-    font-size: 36px;
-}
-
-.descripcion_footer{
-    color: white;
-    font-size: 22px;
-    padding-bottom: 60px;
-}
-
-.boton_contactanos{
-    padding: 10px 10px;
 }

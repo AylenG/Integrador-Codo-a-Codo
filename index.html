@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,164 +10,168 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <!-- font-family: 'Playfair Display', serif; -->
+    <!-- Utilizo la metodología CSS BEM -->
 </head>
 
 <body>
-    <header>
-        <div class="espacio">
-            <h1>IMAXVENTAS</h1>
-            <nav class="navbar">
-                <a href="#">Nosotros</a>
-                <a href="#">Anuncios</a>
-                <a href="#">Blog</a>
-                <a href="#">Contactos</a>
+    <header class="header">
+        <div class="header__superior">
+            <h1 class="header__titulo">IMAXVENTAS</h1>
+            <nav class="header__nav-links">
+                <a class="link" href="#">Nosotros</a>
+                <a class="link" href="#">Anuncios</a>
+                <a class="link" href="#">Blog</a>
+                <a class="link" href="#">Contactos</a>
             </nav>
         </div>
-        <h2>Venta de Casas y Departamentos</h2>
-        <h2>Exclusivos de Lujo</h2>
-
+        <div class="header__inferior">
+            <h2 class="header__subtitulo">Venta de Casas y Departamentos</h2>
+            <h2 class="header__subtitulo">Exclusivos de Lujo</h2>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <p class="titulo">Más sobre nosotros</p>
-            <div class="nosotros">
-                <div>
-                    <img src="./imagenes/icono1.svg" alt="candado">
-                    <p class="subtitulo_negrita"><b>SEGURIDAD</b></p>
-                    <p class="descripcion">
+    <main class="main">
+        <section class="main-nosotros">
+            <h2 class="titulo-section">Más sobre nosotros</h2>
+            <div class="card-container">
+                <div class="card-container__card">
+                    <img class="card__img" src="./imagenes/icono1.svg" alt="candado">
+                    <p class="card__subtitulo"><b>SEGURIDAD</b></p>
+                    <p class="card__descripcion">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dicta possimus molestias sunt
-                        harum! Nesciunt autem, aspernatur corporis, eligendi laborum maxime nisi doloribus praesentium
-                        animi, ipsam voluptas qui cumque. Nostrum.
+                        harum! Nesciunt autem, aspernatur corporis.
                     </p>
                 </div>
-                <div>
-                    <img src="./imagenes/icono2.svg" alt="billetes">
-                    <p class="subtitulo_negrita"><b>EL MEJOR PRECIO</b></p>
-                    <p class="descripcion">
+
+                <div class="card-container__card">
+                    <img class="card__img" src="./imagenes/icono2.svg" alt="billetes">
+                    <p class="card__subtitulo"><b>EL MEJOR PRECIO</b></p>
+                    <p class="card__descripcion">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dicta possimus molestias sunt
-                        harum! Nesciunt autem, aspernatur corporis, eligendi laborum maxime nisi doloribus praesentium
-                        animi, ipsam voluptas qui cumque. Nostrum.
+                        harum! Nesciunt autem, aspernatur corporis.
                     </p>
                 </div>
-                <div>
-                    <img src="./imagenes/icono3.svg" alt="reloj">
-                    <p class="subtitulo_negrita"><b>A TIEMPO</b></p>
-                    <p class="descripcion">
+
+                <div class="card-container__card">
+                    <img class="card__img" src="./imagenes/icono3.svg" alt="reloj">
+                    <p class="card__subtitulo"><b>A TIEMPO</b></p>
+                    <p class="card__descripcion">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dicta possimus molestias sunt
-                        harum! Nesciunt autem, aspernatur corporis, eligendi laborum maxime nisi doloribus praesentium
-                        animi, ipsam voluptas qui cumque. Nostrum.
+                        harum! Nesciunt autem, aspernatur corporis.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section>
-            <p class="titulo">Casas y Depas en Venta</p>
-            <div class="nosotros">
-                <article class="bloque">
-                    <img src="./imagenes/anuncio1.jpg" alt="casa en el lago">
-                    <p class="subtitulo">Casa de Lujo en el Lago</p>
-                    <p class="descripcion">
-                        Casa en el lago con excelente vista, acabados de lujo a un excelente precio
-                    </p>
-                    <p class="precio">$3,000,000</p>
-                    <div class="espacios">
-                        <div class="enlinea">
-                            <img src="./imagenes/icono_wc.svg">
-                            <p>3</p>
+        <section class="main-venta">
+            <h2 class="titulo-section">Casas y Depas en Venta</h2>
+            <div class="card-container">
+                <article class="card-casa__card">
+                    <img class="card-casa__img" src="./imagenes/anuncio1.jpg" alt="casa en el lago">
+                    <div class="card-casa__textos">
+                        <p class="card-casa__subtitulo">Casa de Lujo en el Lago</p>
+                        <p class="card-casa__descripcion">
+                            Casa en el lago con excelente vista, acabados de lujo a un excelente precio
+                        </p>
+                        <p class="card-casa__precio">$3,000,000</p>
+                    </div>
+                    <div class="card-casa__servicios">
+                        <div class="servicios">
+                            <img class="servicios__img" src="./imagenes/icono_wc.svg">
+                            <p class="servicios__cant">3</p>
                         </div>
 
-                        <div class="enlinea"> 
-                            <img src="./imagenes/icono_estacionamiento.svg">
-                            <p>3</p>
+                        <div class="servicios">
+                            <img class="servicios__img" src="./imagenes/icono_estacionamiento.svg">
+                            <p class="servicios__cant">3</p>
                         </div>
 
-                        <div class="enlinea">
-                            <img src="./imagenes/icono_dormitorio.svg">
-                            <p>2</p>
+                        <div class="servicios">
+                            <img class="servicios__img" src="./imagenes/icono_dormitorio.svg">
+                            <p class="servicios__cant">2</p>
                         </div>
                     </div>
-                    <button class="boton_articulo">VER PROPIEDAD</button>
+                    <button class="boton">VER PROPIEDAD</button>
                 </article>
 
-                <article class="bloque">
-                    <img src="./imagenes/anuncio2.jpg" alt="casa terminados de lujo">
-                    <p class="subtitulo">Casa terminados de Lujo</p>
-                    <p class="descripcion">
-                        Casa con diseño moderno, así como tecnología inteligente y amueblada
-                    </p>
-                    <p class="precio"> $2,000,000</p>
-                    <div class="espacios">
-                        <div class="enlinea">
-                            <img src="./imagenes/icono_wc.svg">
-                            <p>3</p>
+                <article class="card-casa__card">
+                    <img class="card-casa__img" src="./imagenes/anuncio2.jpg" alt="casa terminados de lujo">
+                    <div class="card-casa__textos">
+                        <p class="card-casa__subtitulo">Casa terminados de Lujo</p>
+                        <p class="card-casa__descripcion">
+                            Casa con diseño moderno, así como tecnología inteligente y amueblada
+                        </p>
+                        <p class="card-casa__precio"> $2,000,000</p>
+                    </div>
+                    <div class="card-casa__servicios">
+                        <div class="servicios">
+                            <img class="servicios__img" src="./imagenes/icono_wc.svg">
+                            <p class="servicios__cant">3</p>
                         </div>
 
-                        <div class="enlinea"> 
-                            <img src="./imagenes/icono_estacionamiento.svg">
-                            <p>3</p>
+                        <div class="servicios">
+                            <img class="servicios__img" src="./imagenes/icono_estacionamiento.svg">
+                            <p class="servicios__cant">3</p>
                         </div>
 
-                        <div class="enlinea">
-                            <img src="./imagenes/icono_dormitorio.svg">
-                            <p>2</p>
+                        <div class="servicios">
+                            <img class="servicios__img" src="./imagenes/icono_dormitorio.svg">
+                            <p class="servicios__cant">2</p>
                         </div>
                     </div>
-                    <button class="boton_articulo">VER PROPIEDAD</button>
+                    <button class="boton">VER PROPIEDAD</button>
                 </article>
 
-                <article class="bloque">
-                    <img src="./imagenes/anuncio3.jpg" alt="casa con alberca">
-                    <p class="subtitulo">Casa con Alberca</p>
-                    <p class="descripcion">
-                        Casa con alberca y acabados de Lujo en la ciudad, excelente oportunidad
-                    </p>
-                    <p class="precio">$3,000,000</p>
-                    <div class="espacios">
-                        <div class="enlinea">
-                            <img src="./imagenes/icono_wc.svg">
-                            <p>3</p>
+                <article class="card-casa__card">
+                    <img class="card-casa__img" src="./imagenes/anuncio3.jpg" alt="casa con alberca">
+                    <div class="card-casa__textos">
+                        <p class="card-casa__subtitulo">Casa con Alberca</p>
+                        <p class="card-casa__descripcion">
+                            Casa con alberca y acabados de Lujo en la ciudad, excelente oportunidad
+                        </p>
+                        <p class="card-casa__precio">$3,000,000</p>
+                    </div>
+                    <div class="card-casa__servicios">
+                        <div class="servicios">
+                            <img class="servicios__img" src="./imagenes/icono_wc.svg">
+                            <p class="servicios__cant">3</p>
                         </div>
 
-                        <div class="enlinea"> 
-                            <img src="./imagenes/icono_estacionamiento.svg">
-                            <p>3</p>
+                        <div class="servicios">
+                            <img class="servicios__img" src="./imagenes/icono_estacionamiento.svg">
+                            <p class="servicios__cant">3</p>
                         </div>
 
-                        <div class="enlinea">
-                            <img src="./imagenes/icono_dormitorio.svg">
-                            <p>2</p>
+                        <div class="servicios">
+                            <img class="servicios__img" src="./imagenes/icono_dormitorio.svg">
+                            <p class="servicios__cant">2</p>
                         </div>
                     </div>
-                    <button class="boton_articulo">VER PROPIEDAD</button>
+                    <button class="boton">VER PROPIEDAD</button>
                 </article>
             </div>
 
-            <button class="boton_ver">VER TODAS</button>
+            <button class="boton boton-verde">VER TODAS</button>
         </section>
     </main>
 
-    <footer>
-        <div class="mover">
-            <h3>Encuentra la casa de tus sueños</h3>
-            <p class="descripcion_footer">LLena el formulario de Contacto y un asesor se pondrá en contacto contigo a la
+    <footer class="footer">
+        <div class="footer__contacto">
+            <h3 class="footer__subtitulo">Encuentra la casa de tus sueños</h3>
+            <p class="footer__info">LLena el formulario de Contacto y un asesor se pondrá en contacto contigo a la
                 brevedad</p>
-            <button class="boton_contactanos">CONTACTÁNOS</button>
+            <button class="boton boton-contacto">CONTACTÁNOS</button>
         </div>
-
-        <div class="espacio">
-            <nav class="navbar footer">
-                <a href="#">Nosotros</a>
-                <a href="#">Anuncios</a>
-                <a href="#">Blog</a>
-                <a href="#">Contactos</a>
+        <div class="footer__navegacion-autor">
+            <nav class="footer__navegacion">
+                <a class="link" href="#">Nosotros</a>
+                <a class="link" href="#">Anuncios</a>
+                <a class="link" href="#">Blog</a>
+                <a class="link" href="#">Contactos</a>
             </nav>
-            <p>Desarrollado por Gomez Aylen Paula 2021&copy;</p>
+            <p class="footer__autor">Desarrollado por <b>Gomez Aylen Paula</b> 2021&copy;</p>
         </div>
     </footer>
-
 </body>
 
 </html>
