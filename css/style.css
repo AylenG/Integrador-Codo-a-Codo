@@ -81,7 +81,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .card-container__card {
@@ -90,6 +89,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-basis: 370px;
+}
+
+.card-container__card:not(:first-child) {
+    margin-left: 10px;
 }
 
 .card__img {
@@ -121,6 +124,10 @@ body {
     flex-basis: 370px;
     background-color: rgb(245, 245, 245);
     border: 1px solid rgb(214, 214, 214);
+}
+
+.card-casa__card:not(:first-child) {
+    margin-left: 10px;
 }
 
 .card-casa__img {
@@ -196,7 +203,6 @@ body {
 }
 
 .footer__contacto {
-    width: 100%;
     height: 50vh;
     background-image: url(../imagenes/encuentra.jpg);
     background-repeat: no-repeat;
@@ -236,4 +242,79 @@ body {
 
 .footer__autor {
     color: white;
+}
+
+@media screen and (max-width: 1100px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card-container__card,
+    .card-casa__card {
+        width: 370px;
+    }
+
+    .card-casa__card {
+        margin-top: 25px;
+    }
+
+    .footer__contacto {
+        padding-left: 80px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .header__superior {
+        flex-direction: column;
+    }
+
+    .footer__subtitulo,
+    .footer__info {
+        width: 90%;
+    }
+
+    .footer__navegacion-autor {
+        flex-direction: column;
+    }
+
+    .footer__navegacion {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card-casa__card,
+    .card-container__card {
+        width: 95vw;
+        align-self: center;
+    }
+
+    .header__nav-links {
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link {
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .header__inferior {
+        height: 40%;
+    }
+
+    .footer__contacto {
+        padding-left: 30px;
+    }
+
+    .footer__navegacion-autor {
+        padding: 0px;
+        padding-top: 20px;
+    }
+
+    .footer__navegacion {
+        flex-direction: column;
+        align-items: center;
+    }
 }
